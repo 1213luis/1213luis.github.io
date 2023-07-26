@@ -4,137 +4,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tutorial CSS // Efecto etiqueta para nuestros encabezados</title>
+  <title>Como cambiar los cursores en tus paginas web</title>
 
   <style>
-    #contenedor {
-      width: 700px;
-      /*El ancho de la caja o <div>*/
-      height: 700px;
-      /*El altura de la caja o <div>*/
-      font-family: Arial, Helvetica, sans-serif;
-      /*tipo de letra de los elementos de la caja o <div*/
-      background-color: #ccc;
-      /*color de fondo de la caja o <div>, es decir, el color gris*/
-      margin: auto;
-      /*para que el elemento <div> o la caja este centrada horizontalmente*/
-      padding-top: 30px;
-      /*Es el espacio que hay entre el primer <h1> o cabecera #1 y el border de la caja*/
+    div {
+      width: 240px;
+      /*ancho de la caja*/
+      height: 100px;
+      /*altura de la caja*/
+      margin: 10px;
+      /*La separacion exterior de la caja con otra caja o <div>*/
+      background-color: #ff8000;
+      /*color de fondo de la caja*/
+      float: left;
+      /*propiedad para que las cajas o <div> se posicionen de izquierda a derecha*/
+      text-align: center;
+      /*se utiliza para centrar el texto de las cajas*/
+      line-height: 90px;
+      /*se utiliza en este caso para alenear el texto de la caja vertcalmente*/
+      font-family: arial;
     }
 
-    /*Este conjunto de reglas hace referencia al primer encabezado, es decir, cabecera #1*/
-    .normal {
-      color: #fff;
-      /*color de las letras del cabezado*/
-      background-color: #09f;
-      /*Color de fondo del encabezado, es decir, el azul cielo*/
-      padding: 10px 20px;
-      /*El espaciado interno del encabezado*/
-      margin-left: -20px;
-      /*Esta regla permitido que el encabezado se salga de contenedor 20px logrando un efecto que esta por fuera del color gris del contenedor*/
-      position: relative;
-      /*Se utiliza en este caso para poder mover el elemento*/
-      width: 30%;
-      /*Como los elementos <h1> son a nivel de bloque ocuparan todo el espacio pero con el width: 30% hace que el encabezado solo ocupe el 30% de su anchura*/
-      box-shadow: 1px 1px 1px #000;
-      /*Es ala sombra que esta en la parte exterior del elemento <h1>*/
-      -moz-box-shadow: 1px 1px 1px #000;
-      -webkit-box-shadow: 1px 1px 1px #000;
-      margin-bottom: 70px;
-      /*Es el espaciado que hay entr la cabecera #1 y la cabecera #2*/
+    #default {
+      cursor: default;
     }
 
-    /*Este conjunto de reglas hace referencia al primer encabezado, es decir, cabecera #1*/
-
-    /*=======================================================================================*/
-
-    /*Este conjunto de reglas hace referencia al segundo encabezado, es decir, cabecera #2*/
-    .sin-border {
-      color: #fff;
-      /*color de las letras del cabezado*/
-      background-color: #09f;
-      /*Color de fondo del encabezado, es decir, el azul cielo*/
-      padding: 10px 20px;
-      /*El espaciado interno del encabezado*/
-      margin-left: -20px;
-      /*Esta regla permitido que el encabezado se salga de contenedor 20px logrando un efecto que esta por fuera del color gris del contenedor*/
-      position: relative;
-      /*Se utiliza en este caso para poder mover el elemento*/
-      width: 30%;
-      /*Como los elementos <h1> son a nivel de bloque ocuparan todo el espacio pero con el width: 30% hace que el encabezado solo ocupe el 30% de su anchura*/
-      box-shadow: 1px 1px 1px #000;
-      /*Es ala sombra que esta en la parte exterior del elemento <h1>*/
-      -moz-box-shadow: 1px 1px 1px #000;
-      -webkit-box-shadow: 1px 1px 1px #000;
-      margin-bottom: 70px;
-      /*Es el espaciado que hay entr la cabecera #1 y la cabecera #2*/
-      border-radius: 0 50px 50px 0;
+    #cruz {
+      cursor: crosshair;
+      /*Ayuda a que el cursor o mouse se coloque en forma de cruz*/
     }
 
-    /*Este conjunto de reglas hace referencia al segundo encabezado, es decir, cabecera #2*/
-
-    /*Este conjunto de reglas hace referencia al elemento <span> con la class forma, con estas reglas se hace la forma en los encabezados como de un papel cuando se dobla en la hoja, es debe conserva igual para lograr el aspecto deseado, que es como el de un rentangulo invertido pequeño*/
-    .forma {
-      width: 0px;
-      height: 0px;
-      line-height: 0px;
-      border-left: 20px solid transparent;
-      border-top: 10px solid #03f;
-      position: absolute;
-      top: 100%;
-      left: 0%;
+    #puntero {
+      cursor: pointer;
+      /*Ayuda a que el cursor o mouse se coloque como una manito*/
     }
 
-    /*Este conjunto de reglas hace referencia al elemento <span> con la class forma, con estas reglas se hace la forma en los encabezados como de un papel cuando se dobla en la hoja, es debe conserva igual para lograr el aspecto deseado, que es como el de un rentangulo invertido pequeño*/
-
-
-    /*Este conjunto de reglas hace referencia al tercer encabezado, es decir, cabecera #3*/
-    .derecha {
-      color: #fff;
-      /*color de las letras del cabezado*/
-      background-color: #09f;
-      /*Color de fondo del encabezado, es decir, el azul cielo*/
-      padding: 10px 20px;
-      /*El espaciado interno del encabezado*/
-      margin-right: -20px;
-      /*Esta regla permitido que el encabezado se salga de contenedor 20px logrando un efecto que esta por fuera del color gris del contenedor*/
-      position: relative;
-      /*Se utiliza en este caso para poder mover el elemento*/
-      width: 30%;
-      /*Como los elementos <h1> son a nivel de bloque ocuparan todo el espacio pero con el width: 30% hace que el encabezado solo ocupe el 30% de su anchura*/
-      box-shadow: 1px 1px 1px #000;
-      /*Es ala sombra que esta en la parte exterior del elemento <h1>*/
-      -moz-box-shadow: 1px 1px 1px #000;
-      -webkit-box-shadow: 1px 1px 1px #000;
-      margin-bottom: 70px;
-      /*Es el espaciado que hay entr la cabecera #1 y la cabecera #2*/
-      float: right;
-      /*es para que el encabezado #3 se coloque del lado derecha del contenedor*/
+    #mover {
+      cursor: move;
+      /*Ayuda a que el cursor o mouse se coloque una cruz con fechas o el unico de mover en la web*/
     }
 
-    /*Este conjunto de reglas hace referencia al tercer encabezado, es decir, cabecera #3*/
+    #nw-resize {
+      cursor: nw-resize;
+      /*Ayuda a que el cursor o mouse se coloque como el icono de cambiar tamaño hacia la izquierda*/
+    }
 
-    /*Este conjunto de reglas hace referencia al elemento <span> con la class forma, con estas reglas se hace la forma en los encabezados como de un papel cuando se dobla en la hoja, es debe conserva igual para lograr el aspecto deseado, que es como el de un rentangulo invertido pequeño*/
-    .forma-derecha {
-      width: 0px;
-      height: 0px;
-      line-height: 0px;
-      border-right: 20px solid transparent;
-      border-top: 10px solid #03f;
-      position: absolute;
-      top: 100%;
-      right: 0%;
+    #ne-resize {
+      cursor: ne-resize;
+      /*Ayuda a que el cursor o mouse se coloque como el icono de cambiar tamaño hacia la derecha*/
+    }
+
+    #n-resize {
+      cursor: n-resize;
+      /*Ayuda a que el cursor o mouse se coloque como una fecha vertical con dos cabecitas*/
+    }
+
+    #e-resize {
+      cursor: e-resize;
+      /*Ayuda a que el cursor o mouse se coloque como una fecha horizontal con dos cabecitas*/
+    }
+
+    #ayuda {
+      cursor: help;
+      /*Ayuda a que el cursor o mouse se coloque como el icono de ayuda con un signo de pregunta*/
+    }
+
+    #texto {
+      cursor: text;
+      /*Ayuda a que el cursor o mouse se coloque como una fecha | horizontal con dos cabetictas arriba y abajo*/
+
+    }
+
+    #espera {
+      cursor: wait;
+      /*Ayuda a que el cursor o mouse se coloque como el icono de espera o cargando*/
     }
   </style>
 </head>
 
 <body>
 
-  <div id="contenedor">
-    <h1 class="normal">Cabacera #1 <span class="forma"></span></h1>
-    <h1 class="sin-border">Cabacera #2 <span class="forma"></span></h1>
-    <h1 class="derecha">Cabacera #3 <span class="forma-derecha"></span></h1>
-  </div>
+  <div id="default">default</div>
+  <div id="cruz">cruz</div>
+  <div id="puntero">puntero</div>
+  <div id="mover">mover</div>
+  <div id="nw-resize">nw-resize</div>
+  <div id="ne-resize">ne-resize</div>
+  <div id="n-resize">n-resize</div>
+  <div id="e-resize">e-resize</div>
+  <div id="ayuda">ayuda</div>
+  <div id="texto">texto</div>
+  <div id="espera">espera</div>
 
 </body>
 
